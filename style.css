@@ -6,7 +6,7 @@ body {
   font-size: 20px;
   transition: 1s;
 }
-
+/* this is when the gift is opened and the message appears  */
 body.open{
   animation: bg-change 1s 1;
   background-color: #EFA5B2;
@@ -68,6 +68,7 @@ body.open{
   animation: box-open 1s;
   opacity:0;
 }
+
 @keyframes box-open{
   0%{
     top:0px;
@@ -78,6 +79,7 @@ body.open{
     opacity:0;
   }
 }
+
 .gift-top::before,
 .gift-top::after {
     content: "";
