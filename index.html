@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='UTF-8'>
+<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<link rel='stylesheet' href='styles/style.css'>
+<link rel='stylesheet' href='styles/queries.css'>
+<link href='https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap' rel='stylesheet'>
+<title>ذكرى سعيدة </title>
+</head>
+<body>
+</body>
+<div id="app">
+    <div class="gift" :class="{dukdik: !open}" @click="click">
+      <div class="gift-top" 
+           :class="{boxOpen: open}"
+       ></div>
+      <h1 class="gift-text" v-if="open">{{text}}</h1>
+      <div class="gift-box"
+           :class="{boxDown: open}"
+       ></div>
+    </div>
+  </div>
+</html>
