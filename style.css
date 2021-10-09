@@ -1,17 +1,26 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:200');
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
+  user-select: none;
+  outline: none;
   font-family: 'Raleway', sans-serif;
   background-color: #F0E2DB;
   font-size: 20px;
   transition: 1s;
 }
-/* this is when the gift is opened and the message appears  */
+
 body.open{
   animation: bg-change 1s 1;
   background-color: #EFA5B2;
   transition: 1s;
 }
+
 @keyframes bg-change{
   0%{
       background-color: #F0E2DB;
@@ -58,6 +67,8 @@ body.open{
   }
 }
 
+/*
+remove this 
 .gift-content{
   display: none;
 }
@@ -131,23 +142,65 @@ body.open{
 .gift-text{
   color: #FFFFFF;
   white-space: nowrap;
+  left: 50%;
+  top: 40%;
+  opacity: 0;
+}
+
+.gift-text.textAppear{
+  animation: text-appear 1s;
+  -webkit-animation-fill-mode: forwards; /* Chrome 16+, Safari 4+ */
+  -moz-animation-fill-mode: forwards;    /* FF 5+ */
+  -o-animation-fill-mode: forwards;      /* Not implemented yet */
+  -ms-animation-fill-mode: forwards;     /* IE 10+ */
+  animation-fill-mode: forwards;         /* When the spec is finished */
+
+}
+
+@keyframes text-appear{
+  0%{
+    opacity: 0;
+    font-size: 0;
+
+  }
+  100%{
+    opacity: 1;
+    font-size: 16;
+  }
 }
 
 .cake{
   width: 100px;
   height: 100px;
+  top: 50%;
+  left: 50%;
 }
+
+/* .cake.cakeAppear{
+  animation: cake-appear 1s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;    
+  -o-animation-fill-mode: forwards;      
+  -ms-animation-fill-mode: forwards;     
+  animation-fill-mode: forwards;         
+}
+
+@keyframes cake-appear{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+} */
 
 .gift-text,
 .cake{
   position: absolute;
-  top: 50%;
-  left: 50%;
   margin: 0;
   transform: translate3d(-50%, -50%, 0) scale(.5);
   transform-origin: center center;
   z-index: -1;
-  opacity:1;
   transition: 5s;
 }
 
