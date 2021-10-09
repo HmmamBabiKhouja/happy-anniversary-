@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:200');
+@import url('https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap');
 
 * {
   margin: 0;
@@ -9,7 +9,7 @@
 body {
   user-select: none;
   outline: none;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Scheherazade New', serif;
   background-color: #F0E2DB;
   font-size: 20px;
   transition: 1s;
@@ -67,12 +67,12 @@ body.open{
   }
 }
 
-/*
-remove this 
-.gift-content{
-  display: none;
-}
 
+/*
+.gift-content{
+  position: relative;
+  overflow: hidden;
+}
 .content-appearance{
   position: absolute;
   display: flex;
@@ -142,9 +142,12 @@ remove this
 .gift-text{
   color: #FFFFFF;
   white-space: nowrap;
-  left: 50%;
+  left: 25%;
   top: 40%;
   opacity: 0;
+  /* overflow: auto; */
+  width: 70%;
+  height: 30%;
 }
 
 .gift-text.textAppear{
@@ -154,18 +157,16 @@ remove this
   -o-animation-fill-mode: forwards;      /* Not implemented yet */
   -ms-animation-fill-mode: forwards;     /* IE 10+ */
   animation-fill-mode: forwards;         /* When the spec is finished */
-
 }
 
 @keyframes text-appear{
   0%{
     opacity: 0;
     font-size: 0;
-
   }
   100%{
     opacity: 1;
-    font-size: 16;
+    font-size: 15;
   }
 }
 
