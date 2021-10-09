@@ -4,6 +4,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-align: center;
+
 }
 
 body {
@@ -30,6 +32,11 @@ body.open{
   }
 }
 
+#app{
+  display: flex;
+  min-width: 360px;
+}
+
 .gift {
   position: absolute;
   top: 50%;
@@ -40,6 +47,7 @@ body.open{
   cursor: pointer;
   transform: translate(-50%, -50%);
   transition: 1s;
+  
 /*   animation: dukdik 0.5s infinite; */
 }
 
@@ -142,12 +150,12 @@ body.open{
 .gift-text{
   color: #FFFFFF;
   white-space: nowrap;
-  left: 25%;
-  top: 40%;
+  left: 72%;
+  top: 35%;
   opacity: 0;
-  /* overflow: auto; */
-  width: 70%;
-  height: 30%;
+  margin: 0;
+  direction: rtl;
+
 }
 
 .gift-text.textAppear{
@@ -166,7 +174,8 @@ body.open{
   }
   100%{
     opacity: 1;
-    font-size: 15;
+    font-size: 40px;
+    width: 320px;
   }
 }
 
